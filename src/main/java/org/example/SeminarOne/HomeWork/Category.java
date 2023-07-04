@@ -3,34 +3,24 @@ package org.example.SeminarOne.HomeWork;
 import java.util.ArrayList;
 
 public class Category{
-    private String name;
+    private String categoryName;
     private ArrayList<Goods> productsList;
 
-    public Category() {
-    }
 
-    public Category(String name) {
-        this.name = name;
+    public Category(String categoryName) {
+        this.categoryName = categoryName;
         this.productsList = new ArrayList<>();
+    }
+    public String getCategoryName() {
+        return categoryName;
+    }
+    public ArrayList<Goods> getProductsList() {
+        return productsList;
     }
     void addGoods(Goods goods){
         productsList.add(goods);
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public ArrayList<Goods> getProductsList() {
-        return productsList;
-    }
-
-    public void setProductsList(ArrayList<Goods> productsList) {
-        this.productsList = productsList;
-    }
 }
 

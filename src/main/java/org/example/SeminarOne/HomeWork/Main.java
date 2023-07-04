@@ -1,5 +1,5 @@
 package org.example.SeminarOne.HomeWork;
-
+import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         Shop shop = new Shop();
@@ -20,13 +20,36 @@ public class Main {
 
         shop.printCatalog();
 
-        User user1 = new User("user1", "qwe");
-        System.out.println("goods1 = " + goods1);
-        user1.getBasket().addBasket(goods1);
-        user1.getBasket().removeBasket(goods1);
+        User customer1 = new User("Nick", "pass123");
+        User customer2 = new User("Wendy", "pass321");
+
+
+        customer1.getBasket().addBasket(category1.getProductsList().get(0));
+        customer2.getBasket().addBasket(category2.getProductsList().get(1));
+
+        customer1.getBasket().removeBasket(category1.getProductsList().get(0));
+        customer1.getBasket().addBasket(category3.getProductsList().get(0));
+        category2.getProductsList().remove(1);
+        category3.getProductsList().remove(0);
+
+
+        System.out.println(customer1.getLogin() + " - purchases: ");
+        var customer1Purchases = customer1.getBasket().getPurchasedGoods();
+        System.out.println("customer1Purchases = " + customer1Purchases);
+        for (Goods customer1Purchase : customer1Purchases) {
+            System.out.println("* ");
+        }
+
+        System.out.println(customer2.getLogin() + " - purchases: ");
+        ArrayList<Goods> customer2Purchases = customer2.getBasket().getPurchasedGoods();
+        for (Goods goods : customer2Purchases) {
+            System.out.println("* " + goods.getName() + " cost " + goods.getPrice() + " product rating is "
+                    + goods.getRank());
+        }
+
+        System.out.println("________________________________________");
+        System.out.println("Stores assortment after customers visit: ");
         shop.printCatalog();
-
-
     }
 
 }

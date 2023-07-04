@@ -12,7 +12,7 @@ public class Shop {
     }
     public void printCatalog() {
         for (Category category : categories) {
-            System.out.println(category.getName());
+            System.out.println(category.getCategoryName());
             ArrayList<Goods> products = category.getProductsList();
             for (Goods goods : products) {
                 System.out.println("'" + goods.getName() + "'");
