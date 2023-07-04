@@ -5,9 +5,6 @@ public class User{
     private String password;
     private Basket basket;
 
-    public User() {
-    }
-
     public User(String login, String password) {
         this.login = login;
         this.password = password;
@@ -24,7 +21,7 @@ public class User{
     }
 
     public Basket getBasket(){
-        return new Basket();
+        return basket;
     }
 
 }

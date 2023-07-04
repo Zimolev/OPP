@@ -34,10 +34,10 @@ public class Main {
 
 
         System.out.println(customer1.getLogin() + " - purchases: ");
-        var customer1Purchases = customer1.getBasket().getPurchasedGoods();
-        System.out.println("customer1Purchases = " + customer1Purchases);
-        for (Goods customer1Purchase : customer1Purchases) {
-            System.out.println("* ");
+        ArrayList<Goods> customer1Purchases = customer1.getBasket().getPurchasedGoods();
+        for (Goods goods : customer1Purchases) {
+            System.out.println("* " + goods.getName() + " cost " + goods.getPrice() + " product rating is "
+                    + goods.getRank());
         }
 
         System.out.println(customer2.getLogin() + " - purchases: ");
