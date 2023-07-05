@@ -1,6 +1,6 @@
 package org.example.SeminarTwo.SeminarWork;
 
-public class Cat extends Animal{
+public class Cat extends Animal {
     private String color;
     private int age;
 
@@ -39,6 +39,10 @@ public class Cat extends Animal{
         } else {
             System.out.println("Введен неверный возраст");
         }
+    }
+    public void clubok(){
+        System.out.println("Это кот с именем "+name
+                +", с возрастом-"+age+ " , c цветом шерсти: "+color + "Кот свернулся в клубок");
     }
 
     @Override
