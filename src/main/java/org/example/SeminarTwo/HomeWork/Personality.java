@@ -1,8 +1,8 @@
 package org.example.SeminarTwo.HomeWork;
 
-public interface Entity {
-        Integer runningDistance();
-        Integer jumpingHeight();
+public interface Personality {
+        int runningDistance();
+        int jumpingHeight();
         String names();
 
         void move();

@@ -1,20 +1,38 @@
 package org.example.SeminarTwo.HomeWork;
 
-public class Cat {
-    private String name;
+public class Cat implements Personality {
+    private final String name;
+    private final int runDistance;
+    private final int jumpHeight;
 
-    public Cat(String name) {
+    public Cat(String name, int runDistance, int jumpHeight) {
         this.name = name;
+        this.runDistance = runDistance;
+        this.jumpHeight = jumpHeight;
     }
 
-    public void jump(){
-        System.out.println("кот по имени" + name + " прыгает");
-    }
-    public void run(){
-        System.out.println("кот по имени" + name + " бегает");
+    @Override
+    public int runningDistance() {
+        return this.runDistance;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public int jumpingHeight() {
+        return this.jumpHeight;
+    }
+
+    @Override
+    public String names() {
+        return this.name;
+    }
+
+    @Override
+    public void move() {
+        System.out.println("Cat " + this.name + " умеет бегать " + this.runDistance);
+    }
+
+    @Override
+    public void jumping() {
+        System.out.println("Cat " + this.name + " умеет прыгать " + this.jumpHeight);
     }
 }

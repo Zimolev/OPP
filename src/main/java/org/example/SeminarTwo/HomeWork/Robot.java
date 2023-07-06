@@ -1,20 +1,38 @@
 package org.example.SeminarTwo.HomeWork;
+public class Robot implements Personality {
 
-public class Robot {
-    private String name;
+    private final String name;
+    private final int runDistance;
+    private final int jumpHeight;
 
-    public Robot(String name) {
+    public Robot(String name, int runDistance, int jumpHeight) {
         this.name = name;
+        this.runDistance = runDistance;
+        this.jumpHeight = jumpHeight;
     }
 
-    public void jump(){
-        System.out.println("робот по имени" + name + " прыгает");
-    }
-    public void run(){
-        System.out.println("робот по имени" + name + " бегает");
+    @Override
+    public int runningDistance() {
+        return this.runDistance;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public int jumpingHeight() {
+        return this.jumpHeight;
+    }
+
+    @Override
+    public String names() {
+        return this.name;
+    }
+
+    @Override
+    public void move() {
+        System.out.println("Robot " + this.name + " умеет бегать " + this.runDistance);
+    }
+
+    @Override
+    public void jumping() {
+        System.out.println("Robot " + this.name + " умеет прыгать " + this.jumpHeight);
     }
 }

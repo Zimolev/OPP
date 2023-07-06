@@ -2,7 +2,7 @@ package org.example.SeminarTwo.SeminarWork.TaskFive;
 
 public class Dog extends Animals {
 
-    private static int count;
+    protected static int count;
 
 
     public Dog() {
@@ -10,5 +10,6 @@ public class Dog extends Animals {
 
     public Dog(String name, String type, int maxRunDistance, int maxSwimDistance) {
         super(name, "Собака", maxRunDistance, maxSwimDistance);
+        count++;
     }
 }

@@ -3,7 +3,7 @@ package org.example.SeminarTwo.SeminarWork.TaskFive;
 public class Animals {
     protected String name;
     protected String type;
-    private static int count;
+    protected static int count;
     private int maxRunDistance;
     private int maxSwimDistance;
 
@@ -27,15 +27,15 @@ public class Animals {
     }
     public void run(int distance){
         if (distance <= maxRunDistance){
-            System.out.println("Животное-" + name + " пробежало дистанцию"+ distance);
+            System.out.println(type + " - " + name + " пробежало дистанцию"+ distance);
         }
-        else System.out.println("Животное-" + name + "  не смогло пробежать дистанцию"+ distance);
+        else System.out.println(type + " - " + name + "  не смогло пробежать дистанцию"+ distance);
     }
     public void swim(int distance){
         if (distance <= maxSwimDistance){
-            System.out.println("Животное-" + name + " проплыло дистанцию"+ distance);
+            System.out.println(type + " - " + name + " проплыло дистанцию"+ distance);
         }
-        else System.out.println("Животное-" + name + "  не смогло проплыть дистанцию"+ distance);
+        else System.out.println(type + " - " + name + "  не смогло проплыть дистанцию"+ distance);
     }
 
 }

@@ -12,5 +12,10 @@ public class Main {
             animal.run(150);
             animal.swim(10);
         }
+        System.out.println("Animals.count = " + Animals.count);
+        System.out.println("Cat.count = " + Cat.count);
+        System.out.println("Tiger.count = " + Tiger.count);
+        System.out.println("HomeCat.count = " + HomeCat.count);
+        System.out.println("Dog.count = " + Dog.count);
     }
 }
