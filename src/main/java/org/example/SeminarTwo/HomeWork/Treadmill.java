@@ -2,7 +2,7 @@ package org.example.SeminarTwo.HomeWork;
 
 public class Treadmill implements Barrier {
 
-    private final int treadLength;
+    private int treadLength;
 
     public Treadmill(int treadLength) {
         this.treadLength = treadLength;

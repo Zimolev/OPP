@@ -1,9 +1,9 @@
 package org.example.SeminarTwo.HomeWork;
 
 public class Cat implements Personality {
-    private final String name;
-    private final int runDistance;
-    private final int jumpHeight;
+    private String name;
+    private int runDistance;
+    private int jumpHeight;
 
     public Cat(String name, int runDistance, int jumpHeight) {
         this.name = name;

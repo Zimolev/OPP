@@ -2,7 +2,7 @@ package org.example.SeminarTwo.HomeWork;
 
 public class Wall implements Barrier {
 
-    private final int wallLength;
+    private int wallLength;
 
     public Wall(int wallLength) {
         this.wallLength = wallLength;

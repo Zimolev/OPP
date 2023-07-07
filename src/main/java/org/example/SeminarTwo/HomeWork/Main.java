@@ -1,31 +1,37 @@
 package org.example.SeminarTwo.HomeWork;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        Personality[] person = {
-                new Human("Oleg",100,1),
-                new Robot("Verder", 1000, 20),
-                new Cat("Murka",25, 3)
-        };
 
-        Barrier[] barriers = {
-                new Wall(2),
-                new Treadmill(50),
-                new Wall(5),
-                new Treadmill(20)
-        };
+        List<Personality> person = new ArrayList();
+        person.add(new Human("Oleg",100,1));
+        person.add(new Robot("Verder", 1000, 20));
+        person.add(new Cat("Murka",25, 3));
+
+
+        List<Barrier> barriers =  new ArrayList<>();
+
+        barriers.add(new Treadmill(50));
+        barriers.add(new Wall(5));
+        barriers.add(new Treadmill(20));
+        barriers.add(new Wall(2));
         runJump(person, barriers);
     }
 
-    static void runJump(Personality[] persons, Barrier[] barriers){
+    /**
+     * @apiNote Пробегаем Personality по Barrier
+     *  @param persons List<Personality>
+     *  @param barriers List<Barrier
+     */
+    static void runJump(List<Personality> persons, List<Barrier>  barriers){
         for (Personality person : persons) {
             for (Barrier barrier : barriers)
                 if (!barrier.moving(person)) {
                     break;
                 }
         }
-
     }
-
-
 }
