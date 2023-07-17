@@ -55,7 +55,7 @@ public class Calculator {
         List<String> binaryNum = new ArrayList<>();
         for (Number number : numbers) {
             if (number instanceof Integer) {
-                String binary = Integer.toBinaryString((((int) number)));
+                String binary = Integer.toBinaryString((int) number);
                 binaryNum.add(binary);
             } else if (number instanceof Double) {
                 int temp = (number.intValue());

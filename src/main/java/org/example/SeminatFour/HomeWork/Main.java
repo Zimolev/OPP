@@ -21,7 +21,7 @@ public class Main {
         System.out.println("calc.sum(integerList) = " + calc.sum(integerList));
         System.out.println("calc.div(integerList) = " + calc.div(integerList));
         System.out.println("calc.mult(integerList) = " + calc.mult(integerList));
-        System.out.println("calc.binary(integerList) = " + calc.binary(integerList));
+        System.out.println("calc.binary(integerList) = " + calc.binary(longList));
         System.out.println("calc.binary(doubleList) = " + calc.binary(doubleList));
 
     }
